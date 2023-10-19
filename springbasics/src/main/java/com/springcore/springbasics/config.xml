@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:context="http://www.springframework.org/schema/context"
+	xmlns:p="http://www.springframework.org/schema/p"
+	xmlns:c="http://www.springframework.org/schema/c"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans 
+    http://www.springframework.org/schema/beans/spring-beans.xsd
+    http://www.springframework.org/schema/context 
+    http://www.springframework.org/schema/context/spring-context.xsd">
+   
+   <!--property using value attribute--> 
+    <!--<bean class="com.springcore.springbasics.Student" name="studentobj">
+		<property name="StudentId" value="25"></property>
+		<property name="StudentName" value="Nancy"></property>
+		<property name="StudentAddress" value="Gurgaon"></property>
+	</bean>-->
+	
+	<!--Property using value tag-->
+	<!--<bean class="com.springcore.springbasics.Student" name="studentobj1">
+		<property name="StudentId">
+		<value>23</value>
+		</property>
+		<property name="StudentName">
+			<value>Gautam</value>
+		</property>
+		<property name="StudentAddress">
+			<value>Punjab</value>
+		</property>
+	</bean>-->
+	
+	<!--Property using p scheme-->
+	<!--<bean class="com.springcore.springbasics.Student" name="studentobj2" 
+	p:StudentId="22" p:StudentName="Pratyasha" p:StudentAddress="Odisha"></bean>-->
+    
+    <!--Constructor using c scheme-->
+    <bean class="com.springcore.springbasics.Student" name="studentobj3" 
+	c:StudentId="21" c:StudentName="Shruti" c:StudentAddress="Bangalore"></bean>
+	
+	<!--Constructor using value as a attribute-->
+	<bean class="com.springcore.springbasics.Student" name="studentobj4">
+		<constructor-arg name="StudentId" value="20" />
+		<constructor-arg name="StudentName" value="Surbhi"/>
+		<constructor-arg name="StudentAddress" value="Gurgaon"/>
+	</bean>
+	
+	<!--Constructor using value tag-->
+	<bean class="com.springcore.springbasics.Student" name="studentobj5">
+		<constructor-arg name="StudentId">
+			<value>29</value>
+		</constructor-arg>
+		<constructor-arg name="StudentName">
+			<value>Gautam</value>
+		</constructor-arg>
+		<constructor-arg name="StudentAddress">
+			<value>Bangalore</value>
+		</constructor-arg>
+	</bean>
+	
+</beans>

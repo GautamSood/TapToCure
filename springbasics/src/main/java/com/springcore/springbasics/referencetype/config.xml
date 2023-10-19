@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:context="http://www.springframework.org/schema/context"
+	xmlns:p="http://www.springframework.org/schema/p"
+	xmlns:c="http://www.springframework.org/schema/c"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans 
+    http://www.springframework.org/schema/beans/spring-beans.xsd
+    http://www.springframework.org/schema/context 
+    http://www.springframework.org/schema/context/spring-context.xsd">
+    
+    <bean class="com.springcore.springbasics.referencetype.Child" name="child1">
+		<property name="name" value="child1"></property>
+		<property name="age" value="2"></property>
+	</bean>  
+	
+	<!--ref as a tag-->
+    <bean class="com.springcore.springbasics.referencetype.Parent" name="parent1">
+		<property name="name" value="Gautam"></property>
+		<property name="age" value="21"></property>
+		<property name="obj">
+			<ref  bean ="child1"/>
+		</property>
+	</bean>
+	
+	<!--ref as a attribute-->
+	<bean class="com.springcore.springbasics.referencetype.Parent" name="parent2">
+		<property name="name" value="Gautam"></property>
+		<property name="age" value="21"></property>
+		<property name="obj" ref="child1"></property>
+	</bean>
+	
+	<!--ref as a p scheme-->
+	<bean class="com.springcore.springbasics.referencetype.Parent" name="parent3" 
+	p:name="Gautam" p:age="21" p:obj-ref="child1"></bean>
+</beans>

@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:context="http://www.springframework.org/schema/context"
+	xmlns:p="http://www.springframework.org/schema/p"
+	xmlns:c="http://www.springframework.org/schema/c"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans 
+    http://www.springframework.org/schema/beans/spring-beans.xsd
+    http://www.springframework.org/schema/context 
+    http://www.springframework.org/schema/context/spring-context.xsd">
+    
+    <bean class="com.springcore.springbasics.collection.Employee" name="employee1">
+		<property name="name" value="Nancy"/>
+		
+		<property name="phones">
+			<list>
+				<value>9306399344</value>
+				<value>8683950873</value>
+				<value>7988754315</value>
+			</list>
+			</property>
+			
+			<property name="addresses">
+				<set>
+					<value>Delhi</value>
+					<value>Gurgaon</value>
+					<value>Bangalore</value>
+				</set>
+			</property>
+			
+			<property name="courses">
+				<map>
+					<entry key="Java" value="48hrcourses"/>
+					<entry key="Python" value="24hrcourses"/>
+					<entry key="C Language" value="56hrcourses"/>
+				</map>
+			</property>
+			
+			<property name="designation">
+				<props>
+					<prop key="Senior">Manager</prop>
+					<prop key="Lead">Tech</prop>
+					<prop key="Programmer">Chief</prop>
+				</props>
+			</property>
+	</bean>
+</beans>
